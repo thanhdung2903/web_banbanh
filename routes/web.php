@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/master',[PageController::class,'getIndex']);
+Route::get('/type/{id}',[PageController::class,'getLoaiSp']);
+// Route::get('/loai_sanpham',[PageController::class,'getLoaiSp']);
+Route::get('/chitiet_sanpham',[PageController::class,'geChitiet']);
+Route::get('/lienhe',[PageController::class,'geLienhe']);
+Route::get('/about',[PageController::class,'getAbout']);
+
+
