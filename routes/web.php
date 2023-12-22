@@ -26,4 +26,9 @@ Route::get('/chitiet_sanpham',[PageController::class,'geChitiet']);
 Route::get('/lienhe',[PageController::class,'geLienhe']);
 Route::get('/about',[PageController::class,'getAbout']);
 
+//----------------CART-----------------
+Route::get('/add_to_cart/{id}',[PageController::class,'getAddToCart'])->name('themgiohang');
+Route::get('/del_car/{id}',[PageController::class,'getDelItemCart'])->name('xoagiohang');
+
+
 
