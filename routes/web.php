@@ -21,12 +21,12 @@ Route::get('/', function () {
 
 Route::get('/master',[PageController::class,'getIndex']);
 Route::get('/type/{id}',[PageController::class,'getLoaiSp']);
-// Route::get('/loai_sanpham',[PageController::class,'getLoaiSp']);
+Route::get('/loai_sanpham',[PageController::class,'getLoaiSp']);
 Route::get('/chitiet_sanpham',[PageController::class,'geChitiet']);
 Route::get('/lienhe',[PageController::class,'geLienhe']);
 Route::get('/about',[PageController::class,'getAbout']);
 
-//----------------CART-----------------
+//----------------CAR-----------------
 Route::get('/add_to_cart/{id}',[PageController::class,'getAddToCart'])->name('themgiohang');
 Route::get('/del_car/{id}',[PageController::class,'getDelItemCart'])->name('xoagiohang');
 

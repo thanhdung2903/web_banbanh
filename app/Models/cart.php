@@ -6,6 +6,7 @@ class Cart extends Model
     public $items = null;
     public $totalQty = 0;
     public $totalPrice = 0;
+
     public function __construct($oldCart)
     {
         if ($oldCart) {
@@ -62,3 +63,4 @@ class Cart extends Model
         unset($this->items[$id]);
     }
 }
+?>
